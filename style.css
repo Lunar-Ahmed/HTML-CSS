@@ -176,7 +176,7 @@ body{
 }
 
 /*BARS SHADOWS */
-.icon-bars .overlay{
+.icon-bars.overlay{
     background: rgb(97, 114, 129);
     background: rgb(183, 199, 211);
     width: 20px;
@@ -192,27 +192,32 @@ body{
     100%{width: 0px;}
 }
 
-.icon-bar .overlay::before{
+.icon-bar.overlay::before{
     background: rgb(97, 114, 129);
     background: rgb(183, 199, 211);
     width: 10px;
-    animation: topBar 3s infinite 0.2s infinite;
+    animation: topBar 3s infinite 0.2s;
+    -webkit-animation: topBar 3s infinite 0s;
 }@keyframes topBar{
     0%{width: 0px;}
     50%{width: 10px}
     100%{width: 0px;}
+}@-webkit-keyframes topBar{
+    0%{width: 0px;}
+    50%{width: 10px;}
+    100%{width: 0px;}
 }
 
-.icon-bars .overlay::after{
+.icon-bars.overlay::after{
     background: rgb(97,114, 127);
     background: rgb(183, 199, 211);
     width: 15px;
     animation: bottomBar 3s infinite 1s;
-    -webkit-animation: bottonBar 3s infinite 1s;
+    -webkit-animation: bottomBar 3s infinite 1s;
 }@keyframes bottomBar{
     0%{width: 0px;}
     50%{width: 15px;}
-    100%{width: o0px;}
+    100%{width: 0px;}
 }
 @-webkit-keyframes bottomBar{
     0%{width: 0px;}
@@ -221,7 +226,7 @@ body{
 }
 
 /* TOGGLE MENU ICON */
-.menuIcon .toggle .icon-bars{
+.menuIcon.toggle .icon-bars{
     top: 5px;
     transform: translate3d(0, 5px, 0) rotate(135deg);
     transition-delay: 0.1s;
@@ -234,14 +239,14 @@ body{
     opacity: 0;
 }
 
-.menu.toggle .icon::after{
+.menu.toggle .icon-bars::after{
     top: 10px;
     transform: translate3d(0, -10px, 0) rotate(-270deg);
     transition-delay: 0.1s;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-menuIcon.toggle .icon-bars .overlay{
+.menuIcon.toggle .icon-bars.overlay{
     width: 20px;
     opacity: 0;
     -webkit-transition: all 0s ease 0s;

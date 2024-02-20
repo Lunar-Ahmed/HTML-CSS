@@ -62,6 +62,7 @@ body{
     float: right;
     list-style: none;
     margin-top: -2px;
+    margin-right: 14px;
     text-align: right;
     transition: transform 0.5s ease-out;
     -webkit-transition: transform 0.5s ease-out
@@ -90,6 +91,7 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
 }
 
 #navbar li a:hover{
